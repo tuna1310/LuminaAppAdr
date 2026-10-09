@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Lumina</string>
+    <string name="camera_permission_required">Camera permission is required to take manual photos.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="shutter_speed">Shutter</string>
+    <string name="iso">ISO</string>
+    <string name="focus">Focus</string>
+    <string name="white_balance">WB</string>
+    <string name="exposure_bias">EV</string>
+    <string name="auto">AUTO</string>
+    <string name="manual">MANUAL</string>
+    <string name="macro">Macro</string>
+    <string name="infinity">Infinity</string>
+    <string name="format">Format</string>
+    <string name="resolution">Resolution</string>
+    <string name="post_processing">Post-Processing</string>
+    <string name="color_space">Color Space</string>
+    <string name="settings">Settings</string>
+    <string name="gallery">Gallery</string>
+    <string name="bracketing">Bracketing</string>
+    <string name="enhanced_raw">Enhanced RAW</string>
+    <string name="smart_selfie">Smart Selfie</string>
+    <string name="grid">Grid</string>
+    <string name="histogram">Histogram</string>
+    <string name="focus_peaking">Focus Peaking</string>
+    <string name="exposure_clipping">Clipping Zebra</string>
+    <string name="no_photos">No photos captured yet.</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="exif_details">EXIF Information</string>
+    <string name="flash_auto">Flash Auto</string>
+    <string name="flash_on">Flash On</string>
+    <string name="flash_off">Flash Off</string>
+    <string name="camera_not_available">Camera is not available on this device.</string>
+    <string name="manual_sensor_not_supported">Manual sensor control is not supported on this lens.</string>
+</resources>
