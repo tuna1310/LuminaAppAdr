@@ -291,14 +291,14 @@ class CameraViewModel(application: Application) : AndroidViewModel(application) 
                 it.copy(
                     isCapturing = false,
                     lastCapturedPhotoUri = uri,
-                    message = "Đã lưu: ${uri.lastPathSegment}"
+                    message = "Saved: ${uri.lastPathSegment}"
                 )
             }
         }.onFailure { err ->
             _uiState.update {
                 it.copy(
                     isCapturing = false,
-                    message = "Lỗi chụp: ${err.localizedMessage}"
+                    message = "Capture error: ${err.localizedMessage}"
                 )
             }
         }
@@ -334,7 +334,7 @@ class CameraViewModel(application: Application) : AndroidViewModel(application) 
             it.copy(
                 isCapturing = false,
                 lastCapturedPhotoUri = lastUri,
-                message = "Đã chụp bộ 3 ảnh Bracketing thành công"
+                message = "3-shot Bracketing capture complete"
             )
         }
     }
@@ -370,7 +370,7 @@ class CameraViewModel(application: Application) : AndroidViewModel(application) 
             _uiState.update {
                 it.copy(
                     isCapturing = false,
-                    message = "Lỗi Enhanced RAW: ${err.localizedMessage}"
+                    message = "Enhanced RAW error: ${err.localizedMessage}"
                 )
             }
         }

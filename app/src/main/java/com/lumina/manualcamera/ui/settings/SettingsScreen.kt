@@ -105,7 +105,7 @@ fun SettingsScreen(
                             )
                             if (!isSupported) {
                                 Text(
-                                    text = "Không hỗ trợ trên cảm biến này",
+                                    text = "Not supported on this sensor",
                                     color = Color.Red.copy(alpha = 0.7f),
                                     fontSize = 10.sp
                                 )
@@ -164,12 +164,12 @@ fun SettingsScreen(
             }
 
             // 4. Sensor Hardware Diagnostics
-            SectionCard(title = "Thông tin phần cứng cảm biến") {
-                HardwareInfoRow("Điều khiển cảm biến thủ công (Manual Sensor)", if (uiState.capabilities.supportsManualSensor) "Có" else "Không")
-                HardwareInfoRow("Hỗ trợ chụp ảnh RAW (DNG)", if (uiState.capabilities.supportsRaw) "Có" else "Không")
-                HardwareInfoRow("Dải ISO", "${uiState.capabilities.minIso} - ${uiState.capabilities.maxIso}")
-                HardwareInfoRow("Dải Shutter", "${uiState.capabilities.minExposureNs / 1_000_000}ms - ${uiState.capabilities.maxExposureNs / 1_000_000_000}s")
-                HardwareInfoRow("Bù sáng EV", "${uiState.capabilities.minEv / 3} EV đến +${uiState.capabilities.maxEv / 3} EV")
+            SectionCard(title = "Sensor Hardware Information") {
+                HardwareInfoRow("Manual Sensor Controls", if (uiState.capabilities.supportsManualSensor) "Yes" else "No")
+                HardwareInfoRow("RAW (DNG) Capture Support", if (uiState.capabilities.supportsRaw) "Yes" else "No")
+                HardwareInfoRow("ISO Range", "${uiState.capabilities.minIso} - ${uiState.capabilities.maxIso}")
+                HardwareInfoRow("Shutter Range", "${uiState.capabilities.minExposureNs / 1_000_000}ms - ${uiState.capabilities.maxExposureNs / 1_000_000_000}s")
+                HardwareInfoRow("EV Compensation", "${uiState.capabilities.minEv / 3} EV đến +${uiState.capabilities.maxEv / 3} EV")
             }
         }
     }
@@ -210,7 +210,7 @@ private fun HardwareInfoRow(label: String, value: String) {
         Text(text = label, color = LuminaTextSecondary, fontSize = 12.sp)
         Text(
             text = value,
-            color = if (value == "Có") LuminaGreen else LuminaTextPrimary,
+            color = if (value == "Yes") LuminaGreen else LuminaTextPrimary,
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily.Monospace

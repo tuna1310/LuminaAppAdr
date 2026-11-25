@@ -168,7 +168,7 @@ fun GalleryScreen(
                                 putExtra(Intent.EXTRA_STREAM, photo.uri)
                                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                             }
-                            context.startActivity(Intent.createChooser(intent, "Chia sẻ ảnh"))
+                            context.startActivity(Intent.createChooser(intent, "Share Photo"))
                         }) {
                             Icon(Icons.Default.Share, contentDescription = "Share", tint = Color.White)
                         }

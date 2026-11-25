@@ -244,7 +244,7 @@ class CameraController(
         wb: WhiteBalanceParameter,
         ev: ExposureBiasParameter
     ): Result<Uri> = withContext(Dispatchers.IO) {
-        val capture = imageCapture ?: return@withContext Result.failure(IllegalStateException("ImageCapture chưa sẵn sàng"))
+        val capture = imageCapture ?: return@withContext Result.failure(IllegalStateException("ImageCapture is not ready"))
 
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
         val fileName = "LUMINA_${timeStamp}.${format.extension}"
@@ -300,7 +300,7 @@ class CameraController(
 
                         continuation.resumeWith(Result.success(Result.success(savedUri)))
                     } else {
-                        continuation.resumeWith(Result.success(Result.failure(Exception("Uri trả về null"))))
+                        continuation.resumeWith(Result.success(Result.failure(Exception("Returned URI is null"))))
                     }
                 }
 
